@@ -77,7 +77,7 @@ Para visualizar o Figma do projeto, clique [aqui](https://www.figma.com/file/47v
   - react-native-safe-area-context: Este pacote fornece uma API para acessar as informações da área segura do dispositivo, que é a área da tela não obstruída por entalhes, bordas arredondadas, barras de navegação e outros elementos intrusivos. Ele é essencial para garantir que os elementos da interface do usuário sejam visíveis e acessíveis, independentemente das características específicas do hardware do dispositivo.
 
 
-# Implementando a navegação
+## Implementando a navegação
 
   - Verificando o projeto obsevemos que temos a pasta "src" e dentro dela temos a pasta "paginas", que contém :
 
