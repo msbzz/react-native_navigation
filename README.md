@@ -122,9 +122,25 @@ alinhando o layout com o figma removendo o titulo
 
   <img src="info/navigation.cadastro.png" alt="" style="width: 55%; display: block;"/> 
 
+## Navegação via Botton Tabs Navigator
+
+   Observando o figma, mais especificamente a tela 'ListaPets' os botões na base da tela onde concluimos a necessidade de usar outro tipo de navegação que desta vez será 'Botton Tabs Navigator'
+
+  Sendo assim, é necessário instalar a dependência para 'bottom-tab-navigator'
+
+https://reactnavigation.org/docs/bottom-tab-navigator
 
 
+  - npm install @react-navigation/bottom-tabs
 
 
+Continuando a adaptação, será necessáro criar as rotas em Navigation fazendo um alinhamento de rota ou seja dentro do 'stack' sera feita a porta de entrada para o tab navigator  
+
+
+<img src="info/navigation.aninhar.tab.png" alt="" style="width: 55%; display: block;"/> 
+
+Agora é preciso ajustar o Login para que faça a navegação para 'ListaPets'
+
+<img src="info/login.navegacao.png" alt="" style="width: 55%; display: block;"/>
 
 
