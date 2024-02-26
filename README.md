@@ -108,6 +108,21 @@ Com isso é criada a classe Navigation onde serão definidas as rotas e alterada
 
 <img src="info/main.navigarion.png" alt="" style="width: 55%; display: block;"/>  
 
+alinhando o layout com o figma removendo o titulo
+
+<img src="info/navigation.remove.title.all.png" alt="" style="width: 55%; display: block;"/> 
+
+##  Configurando o fluxo de navegação para torna-se funcional
+
+ - Configurando a navegação na tela Home
+
+ <img src="info/home.navegacao.funcional.png" alt="" style="width: 55%; display: block;"/> 
+
+ - Ajuste de navogation para tela cadastro
+
+  <img src="info/navigation.cadastro.png" alt="" style="width: 55%; display: block;"/> 
+
+
 
 
 
