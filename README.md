@@ -144,3 +144,12 @@ Agora é preciso ajustar o Login para que faça a navegação para 'ListaPets'
 <img src="info/login.navegacao.png" alt="" style="width: 55%; display: block;"/>
 
 
+## remoção cabeçario e implementação do icones
+
+ - Remoção do cabeçario 
+
+ <img src="info/navigation.cab.png" alt="" style="width: 55%; display: block;"/>
+
+- colocação dos icones do tab-navigator
+
+ <img src="info/navigation.icons.tab.navig.png" alt="" style="width: 55%; display: block;"/>
