@@ -144,7 +144,7 @@ Agora é preciso ajustar o Login para que faça a navegação para 'ListaPets'
 <img src="info/login.navegacao.png" alt="" style="width: 55%; display: block;"/>
 
 
-## remoção cabeçario e implementação do icones
+## Remoção cabeçario e implementação do icones em ListaPets
 
  - Remoção do cabeçario 
 
@@ -153,3 +153,39 @@ Agora é preciso ajustar o Login para que faça a navegação para 'ListaPets'
 - colocação dos icones do tab-navigator
 
  <img src="info/navigation.icons.tab.navig.png" alt="" style="width: 55%; display: block;"/>
+
+
+## Selecionando um pet na lista (Renderização dinamica)
+
+- Incluindo a rota para a tela 'Sobre' em navigation
+
+ <img src="info/navigation.sobre.png" alt="" style="width: 75%; display: block;"/>
+
+
+- Inclusão do parametro "navigation" em "ListaPets" onde na chamada de "Card" é adicionada tambem o parametro "navigation"
+
+
+ <img src="info/listaPests.card.navigation.png" alt="" style="width: 75%; display: block;"/>
+
+
+ Em card/index, dentro de 'ListaPets', inclusão do evento em "TouchableOpacity" onde aciona a navegação para "Sobre" , "navigation.navigate" 
+ assim  como os parametros, passados por "navigation", que serão necessários em "Sobre"
+
+ 
+ <img src="info/card.navigation.sobre.png" alt="" style="width: 75%; display: block;"/>
+
+ 
+ - Necessidade de parametrização da tela Sobre para dinamizar a renderização acessando a estrutura 
+   JSON que no caso são 'mocks' em 'mocks/pets.js'.
+
+
+ <img src="info/sobre.parametrizacao.png" alt="" style="width: 75%; display: block;"/> 
+
+
+Em "Sobre/index", repare a utilização do hook 'useRote()', necessário em 'route.params' porque os parâmetros são enviados à tela 'Sobre' através do sistema de navegação do React Navigation. Quando você navega de uma tela para outra no React Navigation. 
+
+
+<img src="info/sobre.useRoutes.png" alt="" style="width: 75%; display: block;"/>
+ 
+
+obs: essa navegação ocorre clicando sobre a imagem do animal

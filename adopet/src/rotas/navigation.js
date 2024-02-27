@@ -6,6 +6,7 @@ import Cadastro from "../paginas/Cadastro";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import ListaPets from "../paginas/ListaPets";
 import Mensagem from "../paginas/Mensagem";
+import Sobre from "../paginas/Sobre";
 import { Image } from "react-native";
 
 const Stack = createStackNavigator();
@@ -43,6 +44,7 @@ export default function Navigation(){
             <Stack.Screen name='Login' component={Login} />
             <Stack.Screen name='Cadastro' component={Cadastro} />
             <Stack.Screen name='Tab' component={TabRoutes} />
+            <Stack.Screen name='Sobre' component={Sobre} />
         </Stack.Navigator>
     </NavigationContainer>
     )
