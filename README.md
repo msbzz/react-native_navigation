@@ -189,3 +189,50 @@ Em "Sobre/index", repare a utilização do hook 'useRote()', necessário em 'rou
  
 
 obs: essa navegação ocorre clicando sobre a imagem do animal
+
+
+## Usando elemento link e drawer
+
+- fluxo de navegação com elemento 'link' em index.js "Sobre"
+
+ - Definir por meio do screen em que tela queremos acessar (nesse caso, a 'Mensagem'), e definimos os parâmetros através de params 
+
+
+<img src="info/sobre.links.png" alt="" style="width: 75%; display: block;"/>
+   
+
+A titulo de visualização, é usado o hook useRoute() de react-navigation/native para se ter acesso aos paramtetros que nesse caso é apenas um "nomePet" 
+
+
+
+<img src="info/mensagem.param.png" alt="" style="width: 75%; display: block;"/>
+ 
+
+- menu hamburg (drawer navigation)
+
+npm install @react-navigation/drawer
+npx expo install react-native-gesture-handler react-native-reanimated
+
+- importação na tela app.js "root" 
+
+
+<img src="info/app.import.gesture.handle.drawer.png" alt="" style="width: 75%; display: block;"/>
+
+- criar configuração em navigation/index.js 
+
+
+<img src="info/navigation.drawer.png" alt="" style="width: 75%; display: block;"/>
+
+
+- O que foi feito, integrar as telas do tab dentro do drawer, permitindo que elas possam renderizar o menu hambúrguer no topo.  
+
+Ao chegar nessa parte, o fluxo de navegação carregará as rotas que construímos dentro do DrawerRoutes, incluindo a ListaPets, o perfil e a opção de sair. A ListaPets já está integrada ao TabRoutes. Portanto, vamos renderizar o TabRoutes, iniciando assim o fluxo de navegação do tab, que incluirá tanto a tela de ListaPets quanto a tela de mensagens, permitindo alternar entre elas.
+
+- na tela de login modificamos a chamada de tab para drawer que fara a renderização na proxima tela "ListaPets"
+
+
+
+<img src="info/login.navigation.drawer.png" alt="" style="width: 75%; display: block;"/>
+
+
+Apesar da página de login estar no Stack, ele está tentando navegar para o TabRoutes. Porém, TabRoutes não pode ser acessado diretamente do Stack, porque ele já não está mais lá. Quem está lá é o Drawer.

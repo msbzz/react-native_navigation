@@ -8,17 +8,55 @@ import ListaPets from "../paginas/ListaPets";
 import Mensagem from "../paginas/Mensagem";
 import Sobre from "../paginas/Sobre";
 import { Image } from "react-native";
+import { createDrawerNavigator } from "@react-navigation/drawer";
+import Perfil from '../paginas/Perfil';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
+const Drawer = createDrawerNavigator();
 
-function TabRoutes(){
-    return(
-        <Tab.Navigator screenOptions={{
-            headerShown: false
-        }}>
+function DrawerRoutes() {
+    return (
+        <Drawer.Navigator
+            screenOptions={{
+                drawerStyle: {
+                    backgroundColor: '#36D6AD'
+                },
+                drawerLabelStyle: {
+                    color: '#FFF',
+                    fontSize: 14,
+                    fontFamily: 'PoppinsRegular',
+                    fontWeight: '400',
+                    lineHeight: 20
+                }
+            }}>
+            <Drawer.Screen
+                name='Lista de Pets'
+                component={TabRoutes}
+                options={{
+                    drawerLabel: 'Pets para adoção',
+                    drawerIcon: () => (<Image source={require('../assets/pets.png')} style={{ width: 24, height: 24 }} ></Image>),
+                    headerTransparent: true,
+                    title: ''
+                }} />
+            <Drawer.Screen
+                name='Perfil'
+                component={Perfil} />
+            <Drawer.Screen
+                name='Sair'
+                component={Home} />
+        </Drawer.Navigator>
+    )
+}
 
-        <Tab.Screen name='Lista de Pets' component={ListaPets} options={{
+function TabRoutes() {
+    return (
+        <Tab.Navigator
+            screenOptions={{
+                headerShown: false
+            }}>
+            <Tab.Screen name="Lista de Pets" component={ListaPets}
+                options={{
                     tabBarIcon: () => (
                         <Image source={require('../assets/pets-green.png')} 
                         style={{ width: 24, height: 24 }} />
@@ -43,7 +81,7 @@ export default function Navigation(){
             <Stack.Screen name='Home'  component={Home}/>
             <Stack.Screen name='Login' component={Login} />
             <Stack.Screen name='Cadastro' component={Cadastro} />
-            <Stack.Screen name='Tab' component={TabRoutes} />
+            <Stack.Screen name='Drawer' component={DrawerRoutes} />
             <Stack.Screen name='Sobre' component={Sobre} />
         </Stack.Navigator>
     </NavigationContainer>

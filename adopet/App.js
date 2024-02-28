@@ -1,7 +1,6 @@
 import 'react-native-gesture-handler';
 import React from 'react';
 import { useFonts, Poppins_400Regular } from '@expo-google-fonts/poppins';
-import Home from './src/paginas/Home';
 import Navigation from './src/rotas/navigation';
 export default function App() {
   let [fontsLoaded, fontError] = useFonts({

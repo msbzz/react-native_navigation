@@ -2,10 +2,9 @@ import { View, ScrollView, StyleSheet, Image, FlatList, Text } from "react-nativ
 import PaginaBase from "../PaginaBase";
 import { Link, useRoute } from "@react-navigation/native";
 import uuid from 'react-native-uuid';
-export default function Sobre({ navigation }) {
-    const route = useRoute();
-    const { nome, imagem, descricao, localidade } = route.params;
-
+export default function Sobre() {
+    const rotas = useRoute();
+    const { nome, imagem, descricao, localidade } = rotas.params;
     return (
         <View style={styles.container}>
             <ScrollView>
@@ -35,11 +34,7 @@ export default function Sobre({ navigation }) {
 
                                 <View style={styles.containerInteracoes}>
                                     <Image source={require('../../assets/share.png')} />
-                                    <Link to={{
-                                        screen: 'Mensagem', params: {
-                                            nomePet: nome
-                                        },
-                                    }} style={styles.local}>
+                                    <Link to={'/'} style={styles.local}>
                                         Compartilhar
                                     </Link>
                                 </View>
@@ -49,7 +44,7 @@ export default function Sobre({ navigation }) {
                         <Text style={styles.textResumo}>{descricao.resumo}</Text>
 
                         {
-                            descricao.fotos.map((item) => <Image source={item} key={uuid.v4()} style={styles.image} />)
+                            descricao.fotos.map((foto) => <Image source={foto} key={uuid.v4()} style={styles.image} />)
                         }
                     </View>
 

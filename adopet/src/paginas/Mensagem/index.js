@@ -1,7 +1,7 @@
 import React from "react";
-import { StyleSheet, Text, View, TextInput, ScrollView } from "react-native";
-import { useRoute } from "@react-navigation/native";
+import { StyleSheet, Text, View, TextInput, ScrollView, TouchableOpacity } from "react-native";
 import PaginaBase from "../PaginaBase";
+import { useRoute } from "@react-navigation/native";
 
 export default function Mensagem() {
     const route = useRoute();
